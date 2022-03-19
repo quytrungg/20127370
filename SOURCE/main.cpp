@@ -89,13 +89,13 @@ bool checkNextMoveWarnsdorff(int** board, int size, int &x, int &y, unsigned lon
         if (checkEmptyWarnsdorff(board, size, nextX, nextY) && count < min) {
             minIdx = i;
             min = count;
-            total++;
         }
     }
     if (minIdx == -1) return false;
     nextX = x + cX[minIdx];
     nextY = y + cY[minIdx];
     board[nextX][nextY] = board[x][y] + 1;
+    total++;
     x = nextX;
     y = nextY;
     return true;
