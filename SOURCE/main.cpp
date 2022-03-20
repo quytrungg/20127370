@@ -94,10 +94,12 @@ bool checkNextMoveWarnsdorff(int** board, int size, int &x, int &y, unsigned lon
     if (minIdx == -1) return false;
     nextX = x + cX[minIdx];
     nextY = y + cY[minIdx];
-    board[nextX][nextY] = board[x][y] + 1;
-    total++;
-    x = nextX;
-    y = nextY;
+    if(nextX != x && nextY != y){
+        board[nextX][nextY] = board[x][y] + 1;
+        total++;
+        x = nextX;
+        y = nextY;
+    }
     return true;
 }
 
