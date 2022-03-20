@@ -150,7 +150,7 @@ void warnsdorffKT(int argc, char* argv[]){
  
 int main(int argc, char* argv[]){
     if(argc == 7){
-        //backtrackingKT(argc, argv);
+        backtrackingKT(argc, argv);
         warnsdorffKT(argc, argv);
         std::cout << "Solved!";
     }
